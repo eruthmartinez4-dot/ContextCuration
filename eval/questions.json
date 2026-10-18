@@ -1,0 +1,89 @@
+{
+  "_note": "Fixed question set for comparing Level 1 (context stuffing) and Level 2 (vector RAG) across Phi-4 Mini and Gemini Flash. Expected answers come from context_sample/. If you replace the persona with your own details, update the expected answers too.",
+  "questions": [
+    {
+      "id": "q01",
+      "category": "direct fact",
+      "question": "What is the deadline for my capstone project, and who is my faculty advisor? Cite the sources.",
+      "expected": "Final presentation and report due 2026-12-11; advisor is Dr. Priya Raman.",
+      "evidence": ["projects/capstone_member_churn.md", "people/collaborators.md"]
+    },
+    {
+      "id": "q02",
+      "category": "direct fact",
+      "question": "At what soil moisture percentage does my garden sensor send an alert? Cite the sources.",
+      "expected": "Below 32 percent for two consecutive readings.",
+      "evidence": ["projects/garden_sensor.md", "journal/2026-10_reflections.md"]
+    },
+    {
+      "id": "q03",
+      "category": "personal preference",
+      "question": "How should you format your answer when I write tl;dr, and what should you never include in any answer? Cite the sources.",
+      "expected": "At most three sentences, no lists, no code; never use emojis.",
+      "evidence": ["profile/communication_style.md"]
+    },
+    {
+      "id": "q04",
+      "category": "cross-document synthesis",
+      "question": "Based on my weekly schedule and energy notes, when is the best time this week for the hardest capstone work, and when should I avoid it? Cite the sources.",
+      "expected": "Saturday 07:00 to 10:00 deep-work block; avoid weekday mornings before 09:00 and Tuesday after studio. Journal on 2026-10-13 also reserves Saturday blocks for the capstone.",
+      "evidence": ["schedule/weekly_routine.md", "profile/about_me.md", "journal/2026-10_reflections.md"]
+    },
+    {
+      "id": "q05",
+      "category": "cross-document synthesis",
+      "question": "Which tools and libraries from my stack am I using for the capstone, and why did I avoid deep learning? Cite the sources.",
+      "expected": "Python 3.12, scikit-learn (logistic regression), XGBoost, SHAP, PostgreSQL; deep learning avoided because data is tabular, explanations are needed for branch staff, and XGBoost trains on a laptop (decision D-002).",
+      "evidence": ["projects/capstone_member_churn.md", "preferences/tools_and_stack.md", "decisions/decision_log.md"]
+    },
+    {
+      "id": "q06",
+      "category": "contradiction / recency",
+      "question": "Which code editor do I currently use for personal projects? Cite the sources and note any conflicting information.",
+      "expected": "Zed since 2026-10-06 (journal); tools_and_stack.md (reviewed 2026-08-30) still says VS Code for everything. VS Code remains in use on the work laptop.",
+      "evidence": ["journal/2026-10_reflections.md", "preferences/tools_and_stack.md"]
+    },
+    {
+      "id": "q07",
+      "category": "contradiction / recency",
+      "question": "What language is my garden sensor firmware written in, and how often does it send readings? Cite the sources and note any conflicting information.",
+      "expected": "MicroPython, every 30 minutes (since 2026-10-06). garden_sensor.md (last updated 2026-07-20) still says Rust and 15 minutes.",
+      "evidence": ["journal/2026-10_reflections.md", "projects/garden_sensor.md"]
+    },
+    {
+      "id": "q08",
+      "category": "absent evidence",
+      "question": "What is my favorite movie? Cite the sources.",
+      "expected": "Not in the context. A good answer says so and does not guess.",
+      "evidence": []
+    },
+    {
+      "id": "q09",
+      "category": "absent evidence",
+      "question": "What GPU does my desktop computer have? Cite the sources.",
+      "expected": "Not in the context. The context says there is no dedicated GPU machine; only a MacBook Air M3 and a work Dell laptop are listed.",
+      "evidence": ["preferences/tools_and_stack.md"]
+    },
+    {
+      "id": "q10",
+      "category": "multi-hop relationships",
+      "question": "List every person connected to my capstone project and describe each person's role in it. Cite the sources.",
+      "expected": "Dr. Priya Raman (faculty advisor), Teresa Alvarez (manager and business sponsor), Sam Chen (code review partner), Marcus Lee (Member Experience lead; interviewed about what callers need, would act on the list).",
+      "evidence": ["people/collaborators.md", "projects/capstone_member_churn.md"]
+    },
+    {
+      "id": "q11",
+      "category": "decision reasoning",
+      "question": "Why did I choose Chroma instead of pgvector, and under what conditions would I revisit that choice? Cite the sources.",
+      "expected": "Class scripts already use Chroma, zero configuration, no need for SQL joins yet (D-003). Revisit if vectors should live next to capstone tables in PostgreSQL or the collection outgrows a laptop.",
+      "evidence": ["decisions/decision_log.md"]
+    },
+    {
+      "id": "q12",
+      "category": "broad summary",
+      "question": "What are the key themes of my goals and current work, and how are they related? Cite the sources.",
+      "expected": "Career move into ML engineering; capstone churn project; privacy-conscious use of synthetic data; building a personal context-aware assistant; side projects and learning. Good answers link these themes across files.",
+      "evidence": ["profile/about_me.md", "projects/capstone_member_churn.md", "decisions/decision_log.md", "learning/studio_notes.md"]
+    }
+  ]
+}
