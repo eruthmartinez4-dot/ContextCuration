@@ -1,0 +1,50 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level2_vector_rag.py --skip-index --top-k 3 --query "How should you format your answer when I write tl;dr, and what should you never include in any answer? Cite the sources." --compare ollama=phi4-mini:3.8b-q4_K_M --compare gemini=gemini-3.8-flash --results evidence/results/level2/q03.json
+--- course.txt::profile/communication_style.md (text, chunk 1) ---
+or the information is not in my context, say so directly instead of guessing.
+
+## Keywords I use
+
+- "tl;dr": answer in at most three sentences, no lists, no code.
+- "deep dive": I want a thorough explanation with sources, examples, and edge cases; length is fine.
+- "rubber duck": do not give me the answer. Ask me one guiding question at a time so I can find the bug or idea myself.
+- "ship it": I have decided; help me finish quickly and skip alternatives.
+
+## Coding help
+
+--- course.txt::profile/communication_style.md (text, chunk 0) ---
+# How I Want an AI Assistant to Communicate With Me
+
+Last reviewed: 2026-09-02
+
+## General rules
+
+- Call me Jordan.
+- Lead with the answer or the code, then explain. Do not open with praise or restate my question.
+- Use plain prose by default. Use a bulleted list only when there are four or more parallel items.
+- No emojis, ever.
+- Use metric units and 24-hour time (for example, 18:00, not 6 PM).
+- When there are trade-offs, name them explicitly and say which option you would pick and why.
+- If you are unsure or the information is not in my context, say so directly instead of guessing.
+
+--- course.txt::schedule/weekly_routine.md (text, chunk 2) ---
+k, so I sometimes use that time for reading if work is quiet.
+
+## Energy notes
+
+- I am slow before 09:00 on weekdays; avoid scheduling hard thinking then.
+- After the Tuesday studio I am too tired for anything except a short reflection note.
+- Sunday evenings are for planning the next week.
+
+--- ollama: phi4-mini:3.8b-q4_K_M ---
+When you write "tl;dr," you want an answer in at most three sentences, no lists, and no code. You should never include emojis in any answer. (Source: course.txt::profile/communication_style.md)
+Finish: stop
+Elapsed: 14.890s
+
+--- gemini: gemini-3.8-flash ---
+Sending the prepared prompt and source text to this cloud provider.
+Based on the supplied sources:
+
+- **When you write "tl;dr":** Answer in at most three sentences, with no lists and no code [course.txt::profile/communication_style.md (chunk 1)].
+- **What to never include in any answer:** Never include emojis ("No emojis, ever") [course.txt::profile/communication_style.md (chunk 0)].
+Finish: STOP
+Elapsed: 4.248s

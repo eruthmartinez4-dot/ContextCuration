@@ -1,0 +1,15 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level1_raw_context.py --context-file prepared_context/course.txt --query "What GPU does my desktop computer have? Cite the sources." --compare ollama=phi4-mini:3.8b-q4_K_M --compare gemini=gemini-3.8-flash --results evidence/results/level1/q09.json
+
+--- ollama: phi4-mini:3.8b-q4_K_M ---
+Based on the provided text, there is no mention of a desktop computer or a GPU being used or owned. The text focuses on online banking safety, explainable models, and various projects such as member churn early-warning, balcony garden soil sensor, and portfolio planning. There is no direct information about a desktop computer or a GPU.
+
+CITATION:
+- None of the provided text mentions a desktop computer or GPU.
+Finish: stop
+Elapsed: 67.117s
+
+--- gemini: gemini-3.8-flash ---
+Sending the prepared prompt and source text to this cloud provider.
+Based on the provided source material, there is no mention of a desktop computer. Jordan's hardware consists of a personal MacBook Air M3 and a work Dell Latitude laptop, and they have "No dedicated GPU machine" (they use a free-tier notebook service for anything requiring a GPU) (Source: preferences/tools_and_stack.md). Therefore, the evidence does not contain information about a desktop computer GPU.
+Finish: STOP
+Elapsed: 3.784s

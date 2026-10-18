@@ -1,0 +1,2 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level2_vector_rag.py --folder prepared_context --db local_vectordb --index-only
+Indexed 53 chunks.

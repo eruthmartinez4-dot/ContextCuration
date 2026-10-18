@@ -1,0 +1,17 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level1_raw_context.py --context-file prepared_context/course.txt --query "What language is my garden sensor firmware written in, and how often does it send readings? Cite the sources and note any conflicting information." --compare ollama=phi4-mini:3.8b-q4_K_M --compare gemini=gemini-3.8-flash --results evidence/results/level1/q07.json
+
+--- ollama: phi4-mini:3.8b-q4_K_M ---
+The garden sensor firmware is written in Rust, as mentioned in the "Garden Sensor" project description. However, the firmware is actually rewritten in MicroPython, as indicated in the "Balcony Garden Sensor" project description. There is conflicting information between the two sources regarding the programming language used for the firmware.
+
+Regarding the frequency of readings, the "Garden Sensor" project description states that the microcontroller reads soil moisture every 15 minutes and publishes readings over MQTT to Home Assistant. There is no conflicting information about the frequency of readings in the provided sources.
+Finish: stop
+Elapsed: 21.582s
+
+--- gemini: gemini-3.8-flash ---
+Sending the prepared prompt and source text to this cloud provider.
+Based on the provided sources, there is conflicting information regarding the language and reading frequency due to updates over time:
+
+* **Earlier notes (Last updated 2026-07-20):** The firmware was written in **Rust** (using the `esp-hal` crate), and readings were published every **15 minutes** over MQTT [Source: projects/garden_sensor.md].
+* **Updated notes (2026-10-06 / 2026-10-14):** The firmware was rewritten in **MicroPython** after giving up on Rust due to compile times and toolchain issues [Source: journal/2026-10_reflections.md, Source: projects/portfolio_plan.md]. Along with this change, the reading interval was moved to every **30 minutes** to reduce noise [Source: journal/2026-10_reflections.md].
+Finish: STOP
+Elapsed: 7.649s

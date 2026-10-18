@@ -1,0 +1,61 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level2_vector_rag.py --skip-index --top-k 3 --query "At what soil moisture percentage does my garden sensor send an alert? Cite the sources." --compare ollama=phi4-mini:3.8b-q4_K_M --compare gemini=gemini-3.8-flash --results evidence/results/level2/q02.json
+--- course.txt::projects/garden_sensor.md (text, chunk 0) ---
+# Side Project: Balcony Garden Soil Sensor
+
+Started: 2026-06-14
+Last updated: 2026-07-20
+
+## What it does
+
+A small microcontroller reads soil moisture in my balcony planters and sends a notification when a planter is too dry.
+
+## Hardware
+
+- ESP32-C3 development board.
+- Two capacitive soil moisture sensors (v1.2), one per planter.
+- Powered by USB from an outlet on the balcony.
+
+## Software
+
+--- course.txt::projects/garden_sensor.md (text, chunk 2) ---
+ants.
+- Planter B: Genovese basil and flat-leaf parsley.
+
+## Calibration notes
+
+- Dry air reading: 3,180 raw. Fully submerged in water: 1,420 raw.
+- Moisture percent is a linear map between those two values, clamped to 0 to 100.
+- The 32 percent threshold came from watching when the tomato leaves started to droop.
+
+## Known issues
+
+- Rust compile times on the laptop are slow and the toolchain setup took a full weekend.
+- The sensor in planter B reads about 5 points high after rain.
+
+--- course.txt::projects/garden_sensor.md (text, chunk 1) ---
+one per planter.
+- Powered by USB from an outlet on the balcony.
+
+## Software
+
+- Firmware is written in Rust using the esp-hal crate. I chose Rust as a learning exercise.
+- Readings are published every 15 minutes over MQTT to Home Assistant running on a Raspberry Pi 4.
+- Home Assistant sends a phone notification when moisture drops below 32 percent for two consecutive readings.
+
+## Plants
+
+- Planter A: two 'Sungold' cherry tomato plants.
+- Planter B: Genovese basil and flat-leaf parsley.
+
+## Calibration notes
+
+--- ollama: phi4-mini:3.8b-q4_K_M ---
+The garden sensor sends an alert when the soil moisture drops below 32 percent for two consecutive readings. (SOURCE: course.txt::projects/garden_sensor.md (text, chunk 1))
+Finish: stop
+Elapsed: 14.268s
+
+--- gemini: gemini-3.8-flash ---
+Sending the prepared prompt and source text to this cloud provider.
+Request failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+Check SDK installation, API key, model access, and quota. No provider fallback was used.
+Elapsed: 6.120s

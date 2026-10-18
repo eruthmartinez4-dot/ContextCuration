@@ -1,0 +1,43 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level1_raw_context.py --context-file prepared_context/course.txt --query "Which tools and libraries from my stack am I using for the capstone, and why did I avoid deep learning? Cite the sources." --compare ollama=phi4-mini:3.8b-q4_K_M --compare gemini=gemini-3.8-flash --results evidence/results/level1/q05.json
+
+--- ollama: phi4-mini:3.8b-q4_K_M ---
+The tools and libraries you are using for the capstone project "Member Churn Early-Warning" are as follows:
+
+1. **Applied AI Systems certificate** - This implies the course provided access to machine learning tools and libraries, although the specific ones are not listed in your summary.
+   
+2. **Logistic regression with class weights** - This suggests the use of a machine learning library like scikit-learn or a similar tool that supports logistic regression.
+
+3. **XGBoost** - XGBoost is a powerful library for gradient boosting, which is a supervised learning technique. It is particularly good for dealing with imbalanced classification problems, as indicated by the performance metrics you mentioned (ROC AUC 0.71 for XGBoost).
+
+4. **SHAP values** - SHAP (SHapley Additive exPlanations) is a library for explaining the output of machine learning models. It helps to interpret the model's predictions, which is essential for explaining to branch staff why a member was flagged.
+
+5. **PostgreSQL** - You are writing to a PostgreSQL table, which implies that you might be using a PostgreSQL database, possibly in conjunction with a machine learning framework that supports database integration.
+
+6. **Synthetically generated data** - While not a library or tool, the mention of synthetic data generation suggests you may be using a Python script (generate_members.py) to create the dataset for the project.
+
+7. **Python script (generate_members.py)** - The use of a Python script for data generation implies familiarity with Python programming, which is a common language for machine learning projects.
+
+You mentioned avoiding deep learning for the capstone project, which is not explicitly stated in your summary. However, it is implied by your choice of models and the nature of the project. You chose logistic regression and XGBoost, which are traditional machine learning techniques, rather than deep learning models that typically require more computational resources and are used for more complex tasks like image and speech recognition. Additionally, you may have chosen these models because they are well-understood and easier to explain to non-technical stakeholders, which aligns with your goal of providing explanations for why members are flagged by the system.
+
+Unfortunately, without more detailed information or direct quotes about avoiding deep learning, I cannot cite the sources from your summary or confirm the reasons for avoiding deep learning with certainty.
+Finish: stop
+Elapsed: 85.603s
+
+--- gemini: gemini-3.8-flash ---
+Sending the prepared prompt and source text to this cloud provider.
+Based on the provided sources:
+
+### Tools and Libraries Used for the Capstone
+* **Python 3.12:** Used as the primary language and for the synthetic data generation script (`generate_members.py`) [preferences/tools_and_stack.md, projects/capstone_member_churn.md].
+* **Logistic regression:** Used for the baseline model [decisions/decision_log.md, projects/capstone_member_churn.md].
+* **XGBoost:** Used for the main model [decisions/decision_log.md, preferences/tools_and_stack.md, projects/capstone_member_churn.md].
+* **SHAP:** Used to generate explanations for top features so branch staff can understand why a member was flagged [decisions/decision_log.md, preferences/tools_and_stack.md, projects/capstone_member_churn.md].
+* **PostgreSQL:** Used as the database where the weekly ranked list of at-risk members is written [preferences/tools_and_stack.md, projects/capstone_member_churn.md].
+
+### Why Deep Learning Was Avoided
+According to decision **D-002**, deep learning (neural networks) was avoided because:
+1. The project involves tabular data [decisions/decision_log.md].
+2. There is a need for model explanations that branch staff can understand (using SHAP) [decisions/decision_log.md].
+3. XGBoost can be trained on a laptop in minutes [decisions/decision_log.md].
+Finish: STOP
+Elapsed: 5.820s

@@ -1,0 +1,40 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level1_raw_context.py --context-file prepared_context/course.txt --query "How should you format your answer when I write tl;dr, and what should you never include in any answer? Cite the sources." --compare ollama=phi4-mini:3.8b-q4_K_M --compare gemini=gemini-3.8-flash --results evidence/results/level1/q03.json
+
+--- ollama: phi4-mini:3.8b-q4_K_M ---
+When you write "tl;dr" in your prompt, it typically stands for "too long; didn't read." In this context, it means you're looking for a concise summary of the main points from the preceding text. When providing a summary, you should:
+
+- Include only the most relevant information to the key facts, goals, or outcomes of the projects mentioned.
+- Keep the summary brief and to the point.
+- Exclude any extraneous details that do not contribute to an understanding of the main points.
+
+Examples of what to include in a summary:
+- One-line summaries of each project.
+- Key facts and goals of the projects.
+- Results or outcomes for each project.
+
+Examples of what to exclude in a summary:
+- Detailed instructions or specific dates (unless they are part of the key facts or goals).
+- Technical details about the implementation unless they are central to understanding the project outcomes.
+- Specific information about the personal routine unless it directly relates to the progress of a project.
+
+In summary, when providing a "tl;dr," aim for brevity and relevance, focusing on what is most essential to grasp the primary intentions and results of the projects.
+
+As for what you should never include in any answer:
+- Personal data: Names, addresses, phone numbers, email addresses, or any other personal identifying information.
+- Sensitive or confidential information: Details that are not meant to be publicly shared or are restricted due to privacy concerns or company policies.
+- Unrelated content: Information that does not pertain to the context of the prompt or the projects mentioned.
+
+Citations are not usually needed for a "tl;dr" summary as you are not directly quoting from a source but summarizing the provided information. However, if you include specific phrases or ideas from the source, you should cite them accordingly. For instance, if you are summarizing a direct quote, you might write: "According to the text in [source file], ..." or if summarizing the essence of a concept introduced in a source, you could say: "[source file] describes ..."
+
+Since the provided text does not contain sensitive or confidential information, the above guidelines are sufficient for creating summaries and for knowing what not to include. Remember to always check the context and the content itself before deciding what is relevant and what is not.
+Finish: stop
+Elapsed: 127.474s
+
+--- gemini: gemini-3.8-flash ---
+Sending the prepared prompt and source text to this cloud provider.
+Based on Source: profile/communication_style.md:
+
+* **When you write "tl;dr":** Format your answer in at most three sentences, with no lists and no code.
+* **What to never include in any answer:** Never include emojis.
+Finish: STOP
+Elapsed: 5.241s

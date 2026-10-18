@@ -1,0 +1,32 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level1_raw_context.py --context-file prepared_context/course.txt --query "List every person connected to my capstone project and describe each person's role in it. Cite the sources." --compare ollama=phi4-mini:3.8b-q4_K_M --compare gemini=gemini-3.8-flash --results evidence/results/level1/q10.json
+
+--- ollama: phi4-mini:3.8b-q4_K_M ---
+Based on the provided text, here is a list of every person connected to your capstone project along with their roles:
+
+1. **Teresa Alvarez**
+   - Role: Business sponsor and your manager at Lakeshore Community Credit Union.
+   - Responsibilities: Reviews the output of the project to ensure it is useful to branch staff.
+   - Citation: Source: projects/capstone_member_churn.md (text)
+
+2. **Dr. Priya Raman**
+   - Role: Faculty advisor.
+   - Responsibilities: Weekly check-ins on Wednesdays via video to guide the progress of the capstone project.
+   - Citation: Source: projects/capstone_member_churn.md (text)
+
+3. **Sam Chen**
+   - Role: Code review partner.
+   - Responsibilities: Partners with you for reviewing each other's pull requests every Sunday to ensure code quality and learning.
+   - Citation: Source: projects/capstone_member_churn.md (text)
+Finish: stop
+Elapsed: 32.440s
+
+--- gemini: gemini-3.8-flash ---
+Sending the prepared prompt and source text to this cloud provider.
+Based on the provided source material, here are the people connected to your capstone project and their roles:
+
+* **Dr. Priya Raman**: Your faculty advisor for the capstone project. She holds weekly check-ins with you on Wednesdays at 12:15 by video and prefers a written one-page update emailed by Tuesday night before each meeting [Source: people/collaborators.md, projects/capstone_member_churn.md, schedule/weekly_routine.md].
+* **Teresa Alvarez**: Your manager at Lakeshore Community Credit Union (Director, Member Insights) and the business sponsor for the capstone project. She reviews whether the project output is useful to branch staff and cares about ensuring branch staff can act on the churn list [Source: people/collaborators.md, projects/capstone_member_churn.md].
+* **Sam Chen**: Your studio classmate and code review partner. You swap weekly pull request reviews on Sundays from 16:00 to 17:00 [Source: people/collaborators.md, projects/capstone_member_churn.md, schedule/weekly_routine.md].
+* **Marcus Lee**: Member Experience team lead at the credit union. He is the person whose team would actually call at-risk members if the churn project were used for real; you interviewed him on 2026-09-10 to understand what information a caller needs [Source: people/collaborators.md].
+Finish: STOP
+Elapsed: 5.148s

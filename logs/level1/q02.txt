@@ -1,0 +1,12 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level1_raw_context.py --context-file prepared_context/course.txt --query "At what soil moisture percentage does my garden sensor send an alert? Cite the sources." --compare ollama=phi4-mini:3.8b-q4_K_M --compare gemini=gemini-3.8-flash --results evidence/results/level1/q02.json
+
+--- ollama: phi4-mini:3.8b-q4_K_M ---
+The garden soil sensor sends an alert when the moisture drops below 32 percent for two consecutive readings. This threshold was determined by observing when the tomato leaves started to droop. The sensor's calibration notes indicate this value. Source: Balcony Garden Soil Sensor - Calibration notes.
+Finish: stop
+Elapsed: 73.375s
+
+--- gemini: gemini-3.8-flash ---
+Sending the prepared prompt and source text to this cloud provider.
+Your garden sensor triggers an alert via Home Assistant when soil moisture drops below 32 percent for two consecutive readings [Source: projects/garden_sensor.md]. An updated reflection log confirms that this 32 percent threshold remained unchanged after the firmware rewrite [Source: journal/2026-10_reflections.md].
+Finish: STOP
+Elapsed: 6.519s

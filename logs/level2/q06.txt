@@ -1,0 +1,54 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level2_vector_rag.py --skip-index --top-k 3 --query "Which code editor do I currently use for personal projects? Cite the sources and note any conflicting information." --compare ollama=phi4-mini:3.8b-q4_K_M --compare gemini=gemini-3.8-flash --results evidence/results/level2/q06.json
+--- course.txt::preferences/tools_and_stack.md (text, chunk 2) ---
+lotlib and seaborn for notebooks; Tableau at work.
+
+## Data and infrastructure
+
+- PostgreSQL 16 running locally in Docker for personal projects.
+- dbt Core at work for transformations (I maintain about 40 models in the member_insights project).
+- GitHub for all personal repositories; I use Conventional Commits and small pull requests even on solo projects.
+
+## Things I avoid
+
+- Jupyter notebooks for anything that needs to be rerun regularly; I move logic into .py modules early.
+- Cloud services that require a credit card for the free tier, unless the class requires them.
+
+--- course.txt::projects/portfolio_plan.md (text, chunk 2) ---
+and an honest write-up of failure cases.
+
+## Project 3: Balcony Garden Sensor
+
+- Shows: embedded hardware, MQTT, Home Assistant integration.
+- Status: firmware now in MicroPython (see October reflections). Needs a README with wiring photos and calibration notes.
+- Lowest priority of the three; publish only if time allows.
+
+## Portfolio rules I set for myself
+
+- Every project gets a README with: problem, approach, how to run, results, limitations.
+- No secrets or real personal or member data in any repository.
+- Prefer finishing one project properly over starting a fourth.
+
+--- course.txt::projects/portfolio_plan.md (text, chunk 0) ---
+# Portfolio Plan
+
+Last reviewed: 2026-10-14
+Goal: three small, well-documented public GitHub projects that support a move into ML engineering by March 2028.
+
+## Project 1: Member Churn Early-Warning (capstone)
+
+- Shows: tabular ML, imbalanced classes, calibration, SHAP explanations, synthetic data generation.
+- Gap to close before publishing: a short model card, a reproducible pipeline (make or a single run script), and a small dashboard.
+- Target publish date: shortly after the 2026-12-11 final presentation.
+
+## Project 2: Personal Context Assistant (this studio)
+
+--- ollama: phi4-mini:3.8b-q4_K_M ---
+The supplied source material does not explicitly mention the code editor used for personal projects. Therefore, there is no information available within the provided sources to answer the question regarding the current code editor used for personal projects.
+Finish: stop
+Elapsed: 16.318s
+
+--- gemini: gemini-3.8-flash ---
+Sending the prepared prompt and source text to this cloud provider.
+Based on the provided source material, there is no mention of which code editor is currently used for personal projects. The evidence is missing.
+Finish: STOP
+Elapsed: 3.714s

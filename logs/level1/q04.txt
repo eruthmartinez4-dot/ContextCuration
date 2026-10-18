@@ -1,0 +1,26 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level1_raw_context.py --context-file prepared_context/course.txt --query "Based on my weekly schedule and energy notes, when is the best time this week for the hardest capstone work, and when should I avoid it? Cite the sources." --compare ollama=phi4-mini:3.8b-q4_K_M --compare gemini=gemini-3.8-flash --results evidence/results/level1/q04.json
+
+--- ollama: phi4-mini:3.8b-q4_K_M ---
+Based on the weekly routine and energy notes provided, the best time this week for the hardest capstone work is on Saturday from 07:00 to 10:00. This is because Saturday is designated as a protected deep-work block, which is considered the best focus time of the week for tackling the hardest coursework ("Personal routine" section).
+
+You should avoid scheduling the hardest capstone work on Monday and Thursday before 09:00, as you are slow before 09:00 on weekdays ("Energy notes" section). Additionally, it's important to avoid working on Tuesday evening due to being too tired after the studio class. After 14:00 on Friday, there are no meetings scheduled at work, so it can also be a good time for deep work if work is quiet, but it's not specified as the best time for the hardest tasks.
+
+The sources cited for this advice are the "Weekly Routine" section, which provides the best time for deep work, and the "Energy notes" section, which explains when you are slow and when you're too tired.
+Finish: stop
+Elapsed: 100.023s
+
+--- gemini: gemini-3.8-flash ---
+Sending the prepared prompt and source text to this cloud provider.
+Based on your schedule and energy notes, here is when you should schedule and avoid your hardest capstone work:
+
+### Best Time for Hardest Capstone Work
+* **Saturday from 07:00 to 10:00:** This is your protected deep-work block and your "best focus time of the week," designated for your hardest coursework [Source: schedule/weekly_routine.md]. Furthermore, you planned to use the two Saturday deep-work blocks before your midpoint review exclusively for the capstone [Source: journal/2026-10_reflections.md].
+
+### Times to Avoid
+* **Before 09:00 on weekdays:** You are slow before 09:00 on weekdays and should avoid scheduling hard thinking during this time [Source: schedule/weekly_routine.md].
+* **Tuesday evenings after studio class (after 21:00):** After your Tuesday studio (18:00 to 21:00), you are too tired for anything other than writing a short reflection note [Source: schedule/weekly_routine.md].
+* **Running times:** Monday and Thursday mornings at 06:30 [Source: schedule/weekly_routine.md, profile/interests_and_life.md].
+* **Monthly volunteer commitment:** Saturday afternoon (usually the third Saturday afternoon) [Source: profile/interests_and_life.md].
+* **The three days before month-end close:** These are the busiest days of the month at work, during which you avoid scheduling coursework-heavy evenings [Source: work/day_job.md].
+Finish: STOP
+Elapsed: 5.432s

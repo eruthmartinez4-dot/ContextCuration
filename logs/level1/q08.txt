@@ -1,0 +1,12 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level1_raw_context.py --context-file prepared_context/course.txt --query "What is my favorite movie? Cite the sources." --compare ollama=phi4-mini:3.8b-q4_K_M --compare gemini=gemini-3.8-flash --results evidence/results/level1/q08.json
+
+--- ollama: phi4-mini:3.8b-q4_K_M ---
+I'm sorry, but as an AI language model, I do not have personal preferences or the ability to watch movies. Therefore, I cannot have a favorite movie. My responses are based on a vast range of information up to my knowledge cutoff date in September 2021, but I don't have the capability to experience or rate movies or other entertainment media.
+Finish: stop
+Elapsed: 58.826s
+
+--- gemini: gemini-3.8-flash ---
+Sending the prepared prompt and source text to this cloud provider.
+Based on the provided source material, there is no mention of your favorite movie.
+Finish: STOP
+Elapsed: 3.590s

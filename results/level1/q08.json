@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-10-18T14:25:44.280725+00:00",
+  "prompt_sha256": "dfffc444e7c4be7c60b3897fb512edebb1747a3ebfd50588b4c7b5a4831a9167",
+  "prompt_characters": 23289,
+  "max_output_tokens": null,
+  "ollama_num_ctx": 4096,
+  "sampling": "provider defaults",
+  "runs": [
+    {
+      "provider": "ollama",
+      "model": "phi4-mini:3.8b-q4_K_M",
+      "effective_max_output_tokens": 1024,
+      "text": "I'm sorry, but as an AI language model, I do not have personal preferences or the ability to watch movies. Therefore, I cannot have a favorite movie. My responses are based on a vast range of information up to my knowledge cutoff date in September 2021, but I don't have the capability to experience or rate movies or other entertainment media.",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_eval_count": 2050,
+        "eval_count": 71,
+        "load_duration": 1146259
+      },
+      "resolved_model": "phi4-mini:3.8b-q4_K_M",
+      "request_settings": {},
+      "status": "ok",
+      "elapsed_seconds": 58.826
+    },
+    {
+      "provider": "gemini",
+      "model": "gemini-3.8-flash",
+      "effective_max_output_tokens": 8192,
+      "text": "Based on the provided source material, there is no mention of your favorite movie.",
+      "finish_reason": "STOP",
+      "usage": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 16,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 5708,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 5708
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 5724,
+        "traffic_type": null
+      },
+      "resolved_model": "gemini-3.8-flash",
+      "request_settings": {
+        "max_output_tokens": 8192,
+        "thinking_config": {
+          "thinking_level": "low"
+        }
+      },
+      "status": "ok",
+      "elapsed_seconds": 3.59
+    }
+  ]
+}

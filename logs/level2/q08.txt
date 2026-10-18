@@ -1,0 +1,47 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level2_vector_rag.py --skip-index --top-k 3 --query "What is my favorite movie? Cite the sources." --compare ollama=phi4-mini:3.8b-q4_K_M --compare gemini=gemini-3.8-flash --results evidence/results/level2/q08.json
+--- course.txt::profile/communication_style.md (text, chunk 1) ---
+or the information is not in my context, say so directly instead of guessing.
+
+## Keywords I use
+
+- "tl;dr": answer in at most three sentences, no lists, no code.
+- "deep dive": I want a thorough explanation with sources, examples, and edge cases; length is fine.
+- "rubber duck": do not give me the answer. Ask me one guiding question at a time so I can find the bug or idea myself.
+- "ship it": I have decided; help me finish quickly and skip alternatives.
+
+## Coding help
+
+--- course.txt::projects/portfolio_plan.md (text, chunk 2) ---
+and an honest write-up of failure cases.
+
+## Project 3: Balcony Garden Sensor
+
+- Shows: embedded hardware, MQTT, Home Assistant integration.
+- Status: firmware now in MicroPython (see October reflections). Needs a README with wiring photos and calibration notes.
+- Lowest priority of the three; publish only if time allows.
+
+## Portfolio rules I set for myself
+
+- Every project gets a README with: problem, approach, how to run, results, limitations.
+- No secrets or real personal or member data in any repository.
+- Prefer finishing one project properly over starting a fourth.
+
+--- course.txt::profile/about_me.md (text, chunk 4) ---
+ass imbalance, threshold choice).
+
+## Things an assistant should know about me
+
+- I learn best from a small working example first, then the theory.
+- I am privacy-conscious because of my job: never suggest using real member data in coursework.
+- I am not a morning person on weekdays, but Saturday mornings are my best focus time.
+
+--- ollama: phi4-mini:3.8b-q4_K_M ---
+The source material does not contain information about a favorite movie.
+Finish: stop
+Elapsed: 7.494s
+
+--- gemini: gemini-3.8-flash ---
+Sending the prepared prompt and source text to this cloud provider.
+Based on the provided source material, there is no mention of your favorite movie.
+Finish: STOP
+Elapsed: 3.316s

@@ -1,0 +1,67 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level2_vector_rag.py --skip-index --top-k 3 --query "Which tools and libraries from my stack am I using for the capstone, and why did I avoid deep learning? Cite the sources." --compare ollama=phi4-mini:3.8b-q4_K_M --compare gemini=gemini-3.8-flash --results evidence/results/level2/q05.json
+--- course.txt::learning/reading_list.md (text, chunk 0) ---
+# Reading List
+
+Last reviewed: 2026-09-20
+
+## In progress
+
+- "Designing Machine Learning Systems" by Chip Huyen. Currently on the chapter about data distribution shifts; most relevant to the capstone because member behavior changes over time.
+- "Build a Large Language Model (From Scratch)" by Sebastian Raschka. Paused at the attention mechanism chapter; I want to finish it over winter break.
+
+## Finished in 2026
+
+- "Storytelling with Data" by Cole Nussbaumer Knaflic. Changed how I design dashboards at work.
+- "Fluent Python" (selected chapters on iterators, generators, and data classes).
+
+--- course.txt::projects/portfolio_plan.md (text, chunk 0) ---
+# Portfolio Plan
+
+Last reviewed: 2026-10-14
+Goal: three small, well-documented public GitHub projects that support a move into ML engineering by March 2028.
+
+## Project 1: Member Churn Early-Warning (capstone)
+
+- Shows: tabular ML, imbalanced classes, calibration, SHAP explanations, synthetic data generation.
+- Gap to close before publishing: a short model card, a reproducible pipeline (make or a single run script), and a small dashboard.
+- Target publish date: shortly after the 2026-12-11 final presentation.
+
+## Project 2: Personal Context Assistant (this studio)
+
+--- course.txt::decisions/decision_log.md (text, chunk 1) ---
+must say so clearly.
+
+## D-002 (2026-09-01): XGBoost before any deep learning
+
+Decision: Use logistic regression and XGBoost for the capstone; no neural networks unless both fail badly.
+Reasons: Tabular data, need for explanations that branch staff understand (SHAP), and I can train XGBoost on my laptop in minutes.
+
+## D-003 (2026-10-06): Chroma instead of pgvector for class retrieval work
+
+--- ollama: phi4-mini:3.8b-q4_K_M ---
+For the capstone, the tools and libraries being used are XGBoost and logistic regression. The decision to use these methods instead of deep learning was based on three reasons:
+
+1. Tabular data: The data being handled for the capstone is tabular.
+2. Need for explanations: XGBoost allows for explanations that branch staff understand (SHAP).
+3. Training on laptop: XGBoost can be trained on the laptop in minutes. 
+
+These reasons are cited from the decision log dated 2026-09-01 under the label D-002. The reasons to avoid deep learning are not explicitly mentioned in the provided source material. However, the decision to use XGBoost and logistic regression over deep learning is mentioned.
+Finish: stop
+Elapsed: 29.271s
+
+--- gemini: gemini-3.8-flash ---
+Sending the prepared prompt and source text to this cloud provider.
+Based on the provided sources:
+
+**Tools, libraries, and techniques used for the capstone:**
+* **Models and algorithms:** Logistic regression and XGBoost [course.txt::decisions/decision_log.md (text, chunk 1)].
+* **Libraries/Tooling and methods:** SHAP explanations [course.txt::projects/portfolio_plan.md (text, chunk 0), course.txt::decisions/decision_log.md (text, chunk 1)], tabular ML techniques, calibration, synthetic data generation, and a reproducible pipeline (`make` or a single run script) [course.txt::projects/portfolio_plan.md (text, chunk 0)].
+
+**Why deep learning was avoided:**
+Deep learning (neural networks) was avoided because:
+1. The project involves tabular data [course.txt::decisions/decision_log.md (text, chunk 1)].
+2. There is a need for explanations that branch staff can understand (SHAP) [course.txt::decisions/decision_log.md (text, chunk 1)].
+3. XGBoost can be trained on the author's laptop in minutes [course.txt::decisions/decision_log.md (text, chunk 1)].
+*(Neural networks will only be considered if both logistic regression and XGBoost fail badly) [course.txt::decisions/decision_log.md (text, chunk 1)].*
+Finish: STOP
+Elapsed: 4.629s

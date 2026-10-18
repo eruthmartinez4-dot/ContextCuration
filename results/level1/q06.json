@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-10-18T14:22:46.814738+00:00",
+  "prompt_sha256": "29a63eb06007baba670454fc4d3578a75be9f92ac8c5184ad1acc0eb266001a3",
+  "prompt_characters": 23359,
+  "max_output_tokens": null,
+  "ollama_num_ctx": 4096,
+  "sampling": "provider defaults",
+  "runs": [
+    {
+      "provider": "ollama",
+      "model": "phi4-mini:3.8b-q4_K_M",
+      "effective_max_output_tokens": 1024,
+      "text": "Based on the provided text, there is no specific mention of a code editor being used for personal projects. The text does not provide any information regarding the tools or software used for coding or project management outside of the work context at Lakeshore Community Credit Union. Therefore, it is not possible to cite a source for the use of a code editor for personal projects from the given text, as there is no conflicting information either. The text only details the use of Rust, esp-hal crate, and the planned use of MicroPython for a different project, but these are related to specific projects mentioned and not general personal coding practices.",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_eval_count": 2050,
+        "eval_count": 125,
+        "load_duration": 1221080
+      },
+      "resolved_model": "phi4-mini:3.8b-q4_K_M",
+      "request_settings": {},
+      "status": "ok",
+      "elapsed_seconds": 67.07
+    },
+    {
+      "provider": "gemini",
+      "model": "gemini-3.8-flash",
+      "effective_max_output_tokens": 8192,
+      "text": "You currently use **Zed** for personal projects and coursework (Source: `journal/2026-10_reflections.md`).\n\n### Conflicting Information\nAn earlier note lists your editor as **VS Code for everything (work and personal)** with the Python, Ruff, and GitLens extensions (Source: `preferences/tools_and_stack.md`). \n\nHowever, your entry dated 2026-10-06 explicitly updates and replaces that note, stating you switched to Zed for personal projects and coursework because it runs faster on your MacBook Air and integrates with Ollama, while keeping VS Code only for your work laptop due to IT restrictions (Source: `journal/2026-10_reflections.md`).",
+      "finish_reason": "STOP",
+      "usage": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 158,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 5718,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 5718
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 5876,
+        "traffic_type": null
+      },
+      "resolved_model": "gemini-3.8-flash",
+      "request_settings": {
+        "max_output_tokens": 8192,
+        "thinking_config": {
+          "thinking_level": "low"
+        }
+      },
+      "status": "ok",
+      "elapsed_seconds": 3.795
+    }
+  ]
+}

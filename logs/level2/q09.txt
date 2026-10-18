@@ -1,0 +1,55 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level2_vector_rag.py --skip-index --top-k 3 --query "What GPU does my desktop computer have? Cite the sources." --compare ollama=phi4-mini:3.8b-q4_K_M --compare gemini=gemini-3.8-flash --results evidence/results/level2/q09.json
+--- course.txt::preferences/tools_and_stack.md (text, chunk 0) ---
+# Tools and Stack
+
+Last reviewed: 2026-08-30
+
+## Hardware
+
+- Personal laptop: MacBook Air M3, 16 GB unified memory, 512 GB SSD. This is where I run Ollama and all coursework.
+- Work laptop: Windows 11 Dell Latitude (locked down by IT; no local LLMs, no personal code).
+- No dedicated GPU machine. For anything that needs a GPU I use a free-tier notebook service.
+
+## Editors and terminals
+
+- Editor: VS Code for everything (work and personal), with the Python, Ruff, and GitLens extensions.
+- Terminal: iTerm2 with zsh on the Mac; PowerShell on the work laptop.
+
+## Languages and libraries
+
+--- course.txt::projects/capstone_member_churn.md (text, chunk 3) ---
+hy a member was flagged.
+4. Output: a weekly ranked list of the top 200 at-risk members per region, written to a PostgreSQL table.
+
+## Current results
+
+- Logistic regression baseline: ROC AUC 0.66.
+- XGBoost first pass: ROC AUC 0.71, precision at top 200 of 0.18.
+- Most important features so far: loss of direct deposit in the last 60 days, decline in digital logins, and number of fee events.
+
+## Open problems
+
+--- course.txt::schedule/weekly_routine.md (text, chunk 1) ---
+16:00 to 17:00 | Pull request review swap with Sam Chen |
+
+## Personal routine
+
+- Running: Monday and Thursday at 06:30, about 5 km along the lakefront path.
+- Saturday 07:00 to 10:00: protected deep-work block. This is my best focus time of the week; I use it for the hardest coursework.
+- Weekday evenings except Tuesday: 19:30 to 21:00 is available for lighter coursework such as reading and documentation.
+- Friday after 14:00: no meetings at work, so I sometimes use that time for reading if work is quiet.
+
+## Energy notes
+
+--- ollama: phi4-mini:3.8b-q4_K_M ---
+The source material does not specify the presence or absence of a dedicated GPU on the desktop computer. The closest related information is in the section discussing the lack of a dedicated GPU machine for tasks that require a GPU. It is mentioned that for anything that needs a GPU, the author uses a free-tier notebook service. However, this does not directly pertain to the desktop computer in question. Therefore, based on the supplied source material, we cannot confirm the presence or type of GPU on the desktop computer.
+Finish: stop
+Elapsed: 24.241s
+
+--- gemini: gemini-3.8-flash ---
+Sending the prepared prompt and source text to this cloud provider.
+Based on the provided source material, there is no mention of a desktop computer. The text specifically states: "No dedicated GPU machine. For anything that needs a GPU I use a free-tier notebook service" [course.txt::preferences/tools_and_stack.md (text, chunk 0)]. 
+
+Therefore, the evidence regarding what GPU your desktop computer has is missing.
+Finish: STOP
+Elapsed: 4.188s

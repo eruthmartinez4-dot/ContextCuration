@@ -1,0 +1,15 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level1_raw_context.py --context-file prepared_context/course.txt --query "What is the deadline for my capstone project, and who is my faculty advisor? Cite the sources." --compare ollama=phi4-mini:3.8b-q4_K_M --compare gemini=gemini-3.8-flash --results evidence/results/level1/q01.json
+
+--- ollama: phi4-mini:3.8b-q4_K_M ---
+The deadline for your capstone project is 2026-12-11. Your faculty advisor is Dr. Priya Raman. These details can be found in the document titled "projects/capstone_member_churn.md" under the section titled "Key facts" and "Current results".
+Finish: stop
+Elapsed: 81.509s
+
+--- gemini: gemini-3.8-flash ---
+Sending the prepared prompt and source text to this cloud provider.
+Based on the provided documents:
+
+* **Capstone Deadline:** The final presentation and report deadline is 2026-12-11 (with a midpoint review on 2026-10-30) [Source: projects/capstone_member_churn.md, journal/2026-10_reflections.md, projects/portfolio_plan.md].
+* **Faculty Advisor:** Dr. Priya Raman [Source: people/collaborators.md, projects/capstone_member_churn.md, schedule/weekly_routine.md].
+Finish: STOP
+Elapsed: 4.833s

@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-10-18T14:22:04.379948+00:00",
+  "prompt_sha256": "b24940660eb8270efe49a8f88903c5d5a11b2621eafa85a66605ec2bcb38aece",
+  "prompt_characters": 2069,
+  "max_output_tokens": null,
+  "ollama_num_ctx": 4096,
+  "sampling": "provider defaults",
+  "runs": [
+    {
+      "provider": "ollama",
+      "model": "phi4-mini:3.8b-q4_K_M",
+      "effective_max_output_tokens": 1024,
+      "text": "For the capstone, the tools and libraries being used are XGBoost and logistic regression. The decision to use these methods instead of deep learning was based on three reasons:\n\n1. Tabular data: The data being handled for the capstone is tabular.\n2. Need for explanations: XGBoost allows for explanations that branch staff understand (SHAP).\n3. Training on laptop: XGBoost can be trained on the laptop in minutes. \n\nThese reasons are cited from the decision log dated 2026-09-01 under the label D-002. The reasons to avoid deep learning are not explicitly mentioned in the provided source material. However, the decision to use XGBoost and logistic regression over deep learning is mentioned.",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_eval_count": 493,
+        "eval_count": 150,
+        "load_duration": 1357094
+      },
+      "resolved_model": "phi4-mini:3.8b-q4_K_M",
+      "request_settings": {},
+      "status": "ok",
+      "elapsed_seconds": 29.271
+    },
+    {
+      "provider": "gemini",
+      "model": "gemini-3.8-flash",
+      "effective_max_output_tokens": 8192,
+      "text": "Based on the provided sources:\n\n**Tools, libraries, and techniques used for the capstone:**\n* **Models and algorithms:** Logistic regression and XGBoost [course.txt::decisions/decision_log.md (text, chunk 1)].\n* **Libraries/Tooling and methods:** SHAP explanations [course.txt::projects/portfolio_plan.md (text, chunk 0), course.txt::decisions/decision_log.md (text, chunk 1)], tabular ML techniques, calibration, synthetic data generation, and a reproducible pipeline (`make` or a single run script) [course.txt::projects/portfolio_plan.md (text, chunk 0)].\n\n**Why deep learning was avoided:**\nDeep learning (neural networks) was avoided because:\n1. The project involves tabular data [course.txt::decisions/decision_log.md (text, chunk 1)].\n2. There is a need for explanations that branch staff can understand (SHAP) [course.txt::decisions/decision_log.md (text, chunk 1)].\n3. XGBoost can be trained on the author's laptop in minutes [course.txt::decisions/decision_log.md (text, chunk 1)].\n*(Neural networks will only be considered if both logistic regression and XGBoost fail badly) [course.txt::decisions/decision_log.md (text, chunk 1)].*",
+      "finish_reason": "STOP",
+      "usage": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 305,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 537,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 537
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 842,
+        "traffic_type": null
+      },
+      "resolved_model": "gemini-3.8-flash",
+      "request_settings": {
+        "max_output_tokens": 8192,
+        "thinking_config": {
+          "thinking_level": "low"
+        }
+      },
+      "status": "ok",
+      "elapsed_seconds": 4.629
+    }
+  ]
+}

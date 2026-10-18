@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-10-18T14:12:38.160620+00:00",
+  "prompt_sha256": "dbb7dbf63ded8b2fcb57ebfbb070d606b773ef675953bb828947eccd8ad3cf19",
+  "prompt_characters": 23332,
+  "max_output_tokens": null,
+  "ollama_num_ctx": 4096,
+  "sampling": "provider defaults",
+  "runs": [
+    {
+      "provider": "ollama",
+      "model": "phi4-mini:3.8b-q4_K_M",
+      "effective_max_output_tokens": 1024,
+      "text": "The garden soil sensor sends an alert when the moisture drops below 32 percent for two consecutive readings. This threshold was determined by observing when the tomato leaves started to droop. The sensor's calibration notes indicate this value. Source: Balcony Garden Soil Sensor - Calibration notes.",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_eval_count": 2050,
+        "eval_count": 55,
+        "load_duration": 1618403
+      },
+      "resolved_model": "phi4-mini:3.8b-q4_K_M",
+      "request_settings": {},
+      "status": "ok",
+      "elapsed_seconds": 73.375
+    },
+    {
+      "provider": "gemini",
+      "model": "gemini-3.8-flash",
+      "effective_max_output_tokens": 8192,
+      "text": "Your garden sensor triggers an alert via Home Assistant when soil moisture drops below 32 percent for two consecutive readings [Source: projects/garden_sensor.md]. An updated reflection log confirms that this 32 percent threshold remained unchanged after the firmware rewrite [Source: journal/2026-10_reflections.md].",
+      "finish_reason": "STOP",
+      "usage": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 69,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 5715,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 5715
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 5784,
+        "traffic_type": null
+      },
+      "resolved_model": "gemini-3.8-flash",
+      "request_settings": {
+        "max_output_tokens": 8192,
+        "thinking_config": {
+          "thinking_level": "low"
+        }
+      },
+      "status": "ok",
+      "elapsed_seconds": 6.519
+    }
+  ]
+}

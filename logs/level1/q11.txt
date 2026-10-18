@@ -1,0 +1,38 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level1_raw_context.py --context-file prepared_context/course.txt --query "Why did I choose Chroma instead of pgvector, and under what conditions would I revisit that choice? Cite the sources." --compare ollama=phi4-mini:3.8b-q4_K_M --compare gemini=gemini-3.8-flash --results evidence/results/level1/q11.json
+
+--- ollama: phi4-mini:3.8b-q4_K_M ---
+Based on the provided sources, there is no direct mention of choosing Chroma over pgvector or vice versa in the context of a specific project. However, there is a reference to ChromaDB in the context of a local Large Language Model (LLM) with Ollama and retrieval, as mentioned in the Portfolio Plan under Project 2: Personal Context Assistant. ChromaDB is a vector database that can store and retrieve embeddings for LLMs, which is why it was chosen for this project.
+
+The Portfolio Plan mentions the use of ChromaDB in a positive light, but it does not explicitly compare it to pgvector or provide a rationale for why Chroma was chosen over pgvector. Chroma is chosen for its capability to work with local LLMs and its integration with the Ollama framework.
+
+pgvector, on the other hand, is a popular open-source vector database that is known for its performance and scalability in storing and searching for dense vectors. It is commonly used in machine learning and natural language processing tasks.
+
+The decision to use Chroma over pgvector could be based on the specific requirements of the project, such as the need for a local database that can integrate with certain frameworks or the desire to avoid network latency by using a database hosted on-premises.
+
+As for conditions that would lead to revisiting the choice between Chroma and pgvector, they might include:
+
+1. Performance bottlenecks: If Chroma starts to significantly underperform compared to pgvector, especially in terms of speed and efficiency, it would be worth considering pgvector for its proven performance characteristics.
+2. Feature set: If pgvector introduces features that Chroma lacks, which are critical for the project, it might be time to revisit the choice.
+3. Scalability: If the project requirements change and a larger scale of data needs to be handled, pgvector's scalability might become a more attractive option.
+4. Integration: If there are better integration options available for pgvector with other tools or frameworks that the project relies on, this could be a reason to switch.
+
+Without explicit documentation or a source that outlines the initial decision to choose Chroma over pgvector, any of the above conditions could prompt a reconsideration of the database choice.
+Finish: stop
+Elapsed: 132.779s
+
+--- gemini: gemini-3.8-flash ---
+Sending the prepared prompt and source text to this cloud provider.
+Based on decision D-003 in `decisions/decision_log.md`:
+
+**Reasons for choosing Chroma instead of pgvector:**
+* The class scripts already use Chroma.
+* Setup is zero-configuration.
+* SQL joins with the vectors are not needed yet.
+
+**Conditions under which the choice would be revisited:**
+* If you want to store vectors next to capstone tables in PostgreSQL.
+* If the collection grows beyond what a laptop can handle comfortably.
+
+*(Source: `decisions/decision_log.md`)*
+Finish: STOP
+Elapsed: 3.664s

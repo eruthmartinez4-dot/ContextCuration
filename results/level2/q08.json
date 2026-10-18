@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-10-18T14:26:57.375250+00:00",
+  "prompt_sha256": "0990a34dd7f59f0273363d60863da52a11d0972d141b6fa55f96c42aca6cfccd",
+  "prompt_characters": 1818,
+  "max_output_tokens": null,
+  "ollama_num_ctx": 4096,
+  "sampling": "provider defaults",
+  "runs": [
+    {
+      "provider": "ollama",
+      "model": "phi4-mini:3.8b-q4_K_M",
+      "effective_max_output_tokens": 1024,
+      "text": "The source material does not contain information about a favorite movie.",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_eval_count": 401,
+        "eval_count": 13,
+        "load_duration": 1175307
+      },
+      "resolved_model": "phi4-mini:3.8b-q4_K_M",
+      "request_settings": {},
+      "status": "ok",
+      "elapsed_seconds": 7.494
+    },
+    {
+      "provider": "gemini",
+      "model": "gemini-3.8-flash",
+      "effective_max_output_tokens": 8192,
+      "text": "Based on the provided source material, there is no mention of your favorite movie.",
+      "finish_reason": "STOP",
+      "usage": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 16,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 433,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 433
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 449,
+        "traffic_type": null
+      },
+      "resolved_model": "gemini-3.8-flash",
+      "request_settings": {
+        "max_output_tokens": 8192,
+        "thinking_config": {
+          "thinking_level": "low"
+        }
+      },
+      "status": "ok",
+      "elapsed_seconds": 3.316
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level2_vector_rag.py --skip-index --top-k 3 --query "What is the deadline for my capstone project, and who is my faculty advisor? Cite the sources." --compare ollama=phi4-mini:3.8b-q4_K_M --compare gemini=gemini-3.8-flash --results evidence/results/level2/q01.json
+--- course.txt::journal/2026-10_reflections.md (text, chunk 2) ---
+10:00) only for the capstone. Skip the reading list until after the midpoint.
+
+The context curation assignment made me realize how often I re-explain my setup to chatbots. If the assistant can retrieve my schedule, stack, and project status, it can give advice that fits my actual constraints.
+
+## 2026-10-16
+
+--- course.txt::projects/portfolio_plan.md (text, chunk 0) ---
+# Portfolio Plan
+
+Last reviewed: 2026-10-14
+Goal: three small, well-documented public GitHub projects that support a move into ML engineering by March 2028.
+
+## Project 1: Member Churn Early-Warning (capstone)
+
+- Shows: tabular ML, imbalanced classes, calibration, SHAP explanations, synthetic data generation.
+- Gap to close before publishing: a short model card, a reproducible pipeline (make or a single run script), and a small dashboard.
+- Target publish date: shortly after the 2026-12-11 final presentation.
+
+## Project 2: Personal Context Assistant (this studio)
+
+--- course.txt::projects/capstone_member_churn.md (text, chunk 0) ---
+# Capstone Project: Member Churn Early-Warning
+
+Status as of 2026-09-28: modeling phase
+
+## One-line summary
+
+Predict which credit union members are likely to close their primary checking account within the next 90 days, so the Member Experience team can reach out before they leave.
+
+## Key facts
+
+- Course: Applied AI Systems certificate, capstone track.
+- Advisor: Dr. Priya Raman (faculty advisor; weekly check-ins on Wednesdays at 12:15 by video).
+- Business sponsor: Teresa Alvarez, my manager at Lakeshore Community Credit Union. She reviews whether the output is useful to branch staff.
+-
+
+--- ollama: phi4-mini:3.8b-q4_K_M ---
+The deadline for your capstone project, Member Churn Early-Warning, is shortly after the 2026-12-11 final presentation. Your faculty advisor is Dr. Priya Raman. Cite the sources as follows:
+
+- The deadline is mentioned in the chunk 0 of `course.txt::projects/capstone_member_churn.md`.
+- The faculty advisor's name is mentioned in the chunk 0 of `course.txt::projects/capstone_member_churn.md`.
+Finish: stop
+Elapsed: 21.231s
+
+--- gemini: gemini-3.8-flash ---
+Sending the prepared prompt and source text to this cloud provider.
+Based on the provided sources:
+
+* **Capstone Deadline:** The exact deadline is not explicitly named as a "deadline," but the final presentation is on **2026-12-11** [course.txt::projects/portfolio_plan.md (text, chunk 0)].
+* **Faculty Advisor:** Your faculty advisor is **Dr. Priya Raman** [course.txt::projects/capstone_member_churn.md (text, chunk 0)].
+Finish: STOP
+Elapsed: 3.928s

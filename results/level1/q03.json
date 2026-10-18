@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-10-18T14:14:38.106882+00:00",
+  "prompt_sha256": "14867c6c69602d006cc777d4142a8341ea92f6fa7803f903344c83464223ed83",
+  "prompt_characters": 23365,
+  "max_output_tokens": null,
+  "ollama_num_ctx": 4096,
+  "sampling": "provider defaults",
+  "runs": [
+    {
+      "provider": "ollama",
+      "model": "phi4-mini:3.8b-q4_K_M",
+      "effective_max_output_tokens": 1024,
+      "text": "When you write \"tl;dr\" in your prompt, it typically stands for \"too long; didn't read.\" In this context, it means you're looking for a concise summary of the main points from the preceding text. When providing a summary, you should:\n\n- Include only the most relevant information to the key facts, goals, or outcomes of the projects mentioned.\n- Keep the summary brief and to the point.\n- Exclude any extraneous details that do not contribute to an understanding of the main points.\n\nExamples of what to include in a summary:\n- One-line summaries of each project.\n- Key facts and goals of the projects.\n- Results or outcomes for each project.\n\nExamples of what to exclude in a summary:\n- Detailed instructions or specific dates (unless they are part of the key facts or goals).\n- Technical details about the implementation unless they are central to understanding the project outcomes.\n- Specific information about the personal routine unless it directly relates to the progress of a project.\n\nIn summary, when providing a \"tl;dr,\" aim for brevity and relevance, focusing on what is most essential to grasp the primary intentions and results of the projects.\n\nAs for what you should never include in any answer:\n- Personal data: Names, addresses, phone numbers, email addresses, or any other personal identifying information.\n- Sensitive or confidential information: Details that are not meant to be publicly shared or are restricted due to privacy concerns or company policies.\n- Unrelated content: Information that does not pertain to the context of the prompt or the projects mentioned.\n\nCitations are not usually needed for a \"tl;dr\" summary as you are not directly quoting from a source but summarizing the provided information. However, if you include specific phrases or ideas from the source, you should cite them accordingly. For instance, if you are summarizing a direct quote, you might write: \"According to the text in [source file], ...\" or if summarizing the essence of a concept introduced in a source, you could say: \"[source file] describes ...\"\n\nSince the provided text does not contain sensitive or confidential information, the above guidelines are sufficient for creating summaries and for knowing what not to include. Remember to always check the context and the content itself before deciding what is relevant and what is not.",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_eval_count": 2050,
+        "eval_count": 462,
+        "load_duration": 1737241
+      },
+      "resolved_model": "phi4-mini:3.8b-q4_K_M",
+      "request_settings": {},
+      "status": "ok",
+      "elapsed_seconds": 127.474
+    },
+    {
+      "provider": "gemini",
+      "model": "gemini-3.8-flash",
+      "effective_max_output_tokens": 8192,
+      "text": "Based on Source: profile/communication_style.md:\n\n* **When you write \"tl;dr\":** Format your answer in at most three sentences, with no lists and no code.\n* **What to never include in any answer:** Never include emojis.",
+      "finish_reason": "STOP",
+      "usage": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 55,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 5725,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 5725
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 5780,
+        "traffic_type": null
+      },
+      "resolved_model": "gemini-3.8-flash",
+      "request_settings": {
+        "max_output_tokens": 8192,
+        "thinking_config": {
+          "thinking_level": "low"
+        }
+      },
+      "status": "ok",
+      "elapsed_seconds": 5.241
+    }
+  ]
+}

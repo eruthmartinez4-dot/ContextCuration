@@ -1,0 +1,45 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level2_vector_rag.py --skip-index --top-k 3 --query "Why did I choose Chroma instead of pgvector, and under what conditions would I revisit that choice? Cite the sources." --compare ollama=phi4-mini:3.8b-q4_K_M --compare gemini=gemini-3.8-flash --results evidence/results/level2/q11.json
+--- course.txt::decisions/decision_log.md (text, chunk 2) ---
+s.
+
+## D-003 (2026-10-06): Chroma instead of pgvector for class retrieval work
+
+Decision: Use the local ChromaDB setup from the class scripts rather than adding the pgvector extension to my PostgreSQL container.
+Reasons: The class scripts already use Chroma, setup is zero-configuration, and I do not need SQL joins with the vectors yet.
+Revisit if: I want to store vectors next to capstone tables in PostgreSQL, or the collection grows beyond what a laptop handles comfortably.
+
+## D-004 (2026-10-06): Keep personal context free of secrets
+
+--- course.txt::decisions/decision_log.md (text, chunk 1) ---
+must say so clearly.
+
+## D-002 (2026-09-01): XGBoost before any deep learning
+
+Decision: Use logistic regression and XGBoost for the capstone; no neural networks unless both fail badly.
+Reasons: Tabular data, need for explanations that branch staff understand (SHAP), and I can train XGBoost on my laptop in minutes.
+
+## D-003 (2026-10-06): Chroma instead of pgvector for class retrieval work
+
+--- course.txt::preferences/tools_and_stack.md (text, chunk 1) ---
+ith zsh on the Mac; PowerShell on the work laptop.
+
+## Languages and libraries
+
+- Python 3.12 is my main language. I use venv for environments (the class standard is .venv-mcp).
+- Data: pandas, polars (learning), DuckDB for local analytics, SQL (PostgreSQL dialect at home, SQL Server at work).
+- ML: scikit-learn, XGBoost, SHAP for explanations. I have used PyTorch only in tutorials.
+- Retrieval and LLMs: Ollama (phi4-mini, all-minilm, llava), ChromaDB, the google-genai SDK for Gemini.
+- Visualization: matplotlib and seaborn for notebooks; Tableau at work.
+
+## Data and infrastructure
+
+--- ollama: phi4-mini:3.8b-q4_K_M ---
+I chose Chroma instead of pgvector for my class retrieval work because the class scripts already use Chroma, and the setup is zero-configuration (D-003, 2026-10-06). I did not need SQL joins with the vectors yet. I would revisit that choice if I wanted to store vectors next to capstone tables in PostgreSQL, or if the collection grows beyond what a laptop handles comfortably (D-003, 2026-10-06).
+Finish: stop
+Elapsed: 21.242s
+
+--- gemini: gemini-3.8-flash ---
+Sending the prepared prompt and source text to this cloud provider.
+Request failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\nPlease retry in 9h26m20.036287214s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.8-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '33980s'}]}}
+Check SDK installation, API key, model access, and quota. No provider fallback was used.
+Elapsed: 1.633s

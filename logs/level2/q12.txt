@@ -1,0 +1,64 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level2_vector_rag.py --skip-index --top-k 3 --query "What are the key themes of my goals and current work, and how are they related? Cite the sources." --compare ollama=phi4-mini:3.8b-q4_K_M --compare gemini=gemini-3.8-flash --results evidence/results/level2/q12.json
+--- course.txt::profile/about_me.md (text, chunk 3) ---
+y context instead of asking me the same questions every session.
+
+## Strengths
+
+- Translating vague business questions into measurable metrics.
+- Writing clear documentation and data dictionaries.
+- Patience with messy data.
+
+## Things I am working on
+
+- I over-research before starting; I need to ship smaller drafts earlier.
+- I underestimate deployment and environment setup time, usually by about half.
+- Statistics intuition for model evaluation (calibration, class imbalance, threshold choice).
+
+## Things an assistant should know about me
+
+--- course.txt::profile/about_me.md (text, chunk 2) ---
+fidence with deep learning, deployment, and anything involving GPUs.
+
+## Goals
+
+1. Primary goal: move from analytics into an ML engineering role within 18 months (target: March 2028).
+2. Finish the capstone project (Member Churn Early-Warning) to a standard I can show in interviews.
+3. Build a public portfolio of three small, well-documented projects on GitHub.
+4. Learn enough about retrieval and agent tooling to build a personal assistant that actually knows my context instead of asking me the same questions every session.
+
+## Strengths
+
+--- course.txt::projects/portfolio_plan.md (text, chunk 0) ---
+# Portfolio Plan
+
+Last reviewed: 2026-10-14
+Goal: three small, well-documented public GitHub projects that support a move into ML engineering by March 2028.
+
+## Project 1: Member Churn Early-Warning (capstone)
+
+- Shows: tabular ML, imbalanced classes, calibration, SHAP explanations, synthetic data generation.
+- Gap to close before publishing: a short model card, a reproducible pipeline (make or a single run script), and a small dashboard.
+- Target publish date: shortly after the 2026-12-11 final presentation.
+
+## Project 2: Personal Context Assistant (this studio)
+
+--- ollama: phi4-mini:3.8b-q4_K_M ---
+The key themes of the goals and current work are centered around moving into an ML engineering role, finishing a capstone project, building a public portfolio of GitHub projects, and learning about retrieval and agent tooling to create a personal assistant that understands context. These themes are interconnected as follows:
+
+1. Moving into an ML engineering role by March 2028 is the overarching goal that guides all other objectives. This goal emphasizes the importance of gaining practical experience in machine learning through projects and learning.
+
+2. Finishing the capstone project, Member Churn Early-Warning, is aligned with this goal as it demonstrates the individual's capability to handle real-world machine learning tasks, including working with imbalanced classes and creating synthetic data, which are valuable skills in an ML engineering role.
+
+3. Building a public portfolio of three small, well-documented public GitHub projects directly supports the goal of transitioning into an ML engineering role. This portfolio showcases the individual's practical experience and skill set to potential employers.
+
+4. Learning about retrieval and agent tooling to build a personal assistant is related to the goal of moving into an ML engineering role because it involves working with advanced technologies such as deep learning, deployment, and GPUs. This knowledge is essential for an ML engineer, and the personal assistant project serves as a practical application of these skills.
+
+The sources cited for these themes are from the provided text chunks, specifically course.txt::profile/about_me.md (text, chunk 2) and course.txt::projects/portfolio_plan.md (text, chunk 0).
+Finish: stop
+Elapsed: 37.886s
+
+--- gemini: gemini-3.8-flash ---
+Sending the prepared prompt and source text to this cloud provider.
+Request failed: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\nPlease retry in 9h23m15.682332108s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.8-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '33795s'}]}}
+Check SDK installation, API key, model access, and quota. No provider fallback was used.
+Elapsed: 1.733s

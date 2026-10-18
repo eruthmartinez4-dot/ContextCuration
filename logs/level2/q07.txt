@@ -1,0 +1,68 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level2_vector_rag.py --skip-index --top-k 3 --query "What language is my garden sensor firmware written in, and how often does it send readings? Cite the sources and note any conflicting information." --compare ollama=phi4-mini:3.8b-q4_K_M --compare gemini=gemini-3.8-flash --results evidence/results/level2/q07.json
+--- course.txt::projects/garden_sensor.md (text, chunk 0) ---
+# Side Project: Balcony Garden Soil Sensor
+
+Started: 2026-06-14
+Last updated: 2026-07-20
+
+## What it does
+
+A small microcontroller reads soil moisture in my balcony planters and sends a notification when a planter is too dry.
+
+## Hardware
+
+- ESP32-C3 development board.
+- Two capacitive soil moisture sensors (v1.2), one per planter.
+- Powered by USB from an outlet on the balcony.
+
+## Software
+
+--- course.txt::projects/garden_sensor.md (text, chunk 1) ---
+one per planter.
+- Powered by USB from an outlet on the balcony.
+
+## Software
+
+- Firmware is written in Rust using the esp-hal crate. I chose Rust as a learning exercise.
+- Readings are published every 15 minutes over MQTT to Home Assistant running on a Raspberry Pi 4.
+- Home Assistant sends a phone notification when moisture drops below 32 percent for two consecutive readings.
+
+## Plants
+
+- Planter A: two 'Sungold' cherry tomato plants.
+- Planter B: Genovese basil and flat-leaf parsley.
+
+## Calibration notes
+
+--- course.txt::projects/garden_sensor.md (text, chunk 2) ---
+ants.
+- Planter B: Genovese basil and flat-leaf parsley.
+
+## Calibration notes
+
+- Dry air reading: 3,180 raw. Fully submerged in water: 1,420 raw.
+- Moisture percent is a linear map between those two values, clamped to 0 to 100.
+- The 32 percent threshold came from watching when the tomato leaves started to droop.
+
+## Known issues
+
+- Rust compile times on the laptop are slow and the toolchain setup took a full weekend.
+- The sensor in planter B reads about 5 points high after rain.
+
+--- ollama: phi4-mini:3.8b-q4_K_M ---
+The garden sensor firmware is written in Rust, as indicated by the source label `-- course.txt::projects/garden_sensor.md (text, chunk 1) ---` and `-- course.txt::projects/garden_sensor.md (text, chunk 2) ---`. It sends readings every 15 minutes, as mentioned in the source label `-- course.txt::projects/garden_sensor.md (text, chunk 1) ---`.
+
+There are no conflicting pieces of information provided in the supplied source material regarding the programming language or the frequency of sensor readings.
+Finish: stop
+Elapsed: 16.030s
+
+--- gemini: gemini-3.8-flash ---
+Sending the prepared prompt and source text to this cloud provider.
+Based on the provided source material:
+
+* **Language:** The firmware is written in Rust using the `esp-hal` crate [course.txt::projects/garden_sensor.md (chunk 1)].
+* **Frequency:** It publishes readings every 15 minutes [course.txt::projects/garden_sensor.md (chunk 1)].
+
+There is no conflicting information in the text.
+Finish: STOP
+Elapsed: 3.686s

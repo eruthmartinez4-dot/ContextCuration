@@ -1,0 +1,60 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level2_vector_rag.py --skip-index --top-k 3 --query "List every person connected to my capstone project and describe each person's role in it. Cite the sources." --compare ollama=phi4-mini:3.8b-q4_K_M --compare gemini=gemini-3.8-flash --results evidence/results/level2/q10.json
+--- course.txt::people/collaborators.md (text, chunk 0) ---
+# People I Work With
+
+Only work and school relationships are listed here, with details I am comfortable sharing.
+
+## Dr. Priya Raman
+
+- Role: Faculty advisor for my capstone project.
+- Meets with me Wednesdays at 12:15 by video.
+- Background in survival analysis and health-care analytics.
+- Prefers a written one-page update emailed by Tuesday night before each check-in.
+
+## Teresa Alvarez
+
+--- course.txt::people/collaborators.md (text, chunk 1) ---
+-page update emailed by Tuesday night before each check-in.
+
+## Teresa Alvarez
+
+- Role: My manager at Lakeshore Community Credit Union (Director, Member Insights) and the business sponsor for the capstone.
+- Cares most about whether branch staff can act on the churn list.
+- Prefers short summaries with one chart; dislikes jargon such as "AUC" without explanation.
+
+## Sam Chen
+
+--- course.txt::learning/reading_list.md (text, chunk 0) ---
+# Reading List
+
+Last reviewed: 2026-09-20
+
+## In progress
+
+- "Designing Machine Learning Systems" by Chip Huyen. Currently on the chapter about data distribution shifts; most relevant to the capstone because member behavior changes over time.
+- "Build a Large Language Model (From Scratch)" by Sebastian Raschka. Paused at the attention mechanism chapter; I want to finish it over winter break.
+
+## Finished in 2026
+
+- "Storytelling with Data" by Cole Nussbaumer Knaflic. Changed how I design dashboards at work.
+- "Fluent Python" (selected chapters on iterators, generators, and data classes).
+
+--- ollama: phi4-mini:3.8b-q4_K_M ---
+The people connected to your capstone project are:
+
+1. Dr. Priya Raman: She is the faculty advisor for your capstone project. You meet with her every Wednesday at 12:15 by video. She prefers a written one-page update emailed by Tuesday night before each check-in. (Source: course.txt::people/collaborators.md (text, chunk 0))
+
+2. Teresa Alvarez: She is your manager at Lakeshore Community Credit Union (Director, Member Insights) and also the business sponsor for your capstone. She cares most about whether branch staff can act on the churn list. She prefers short summaries with one chart; she dislikes jargon such as "AUC" without explanation. (Source: course.txt::people/collaborators.md (text, chunk 1))
+
+3. Sam Chen: He is your instructor for the course you are taking. He has provided a reading list that includes two books you are currently reading for the course. (Source: course.txt::learning/reading_list.md (text, chunk 0))
+Finish: stop
+Elapsed: 34.691s
+
+--- gemini: gemini-3.8-flash ---
+Sending the prepared prompt and source text to this cloud provider.
+Based on the provided source material, the people connected to the capstone project and their roles are:
+
+* **Dr. Priya Raman**: Faculty advisor for the capstone project [course.txt::people/collaborators.md (chunk 0)].
+* **Teresa Alvarez**: Business sponsor for the capstone (as well as the author's manager at Lakeshore Community Credit Union, Director, Member Insights) [course.txt::people/collaborators.md (chunk 1)].
+Finish: STOP
+Elapsed: 3.409s

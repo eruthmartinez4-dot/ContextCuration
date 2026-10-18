@@ -1,0 +1,17 @@
+$ /Users/emmamartinez/Documents/ContextCuration-main/.venv-mcp/bin/python level1_raw_context.py --context-file prepared_context/course.txt --query "Which code editor do I currently use for personal projects? Cite the sources and note any conflicting information." --compare ollama=phi4-mini:3.8b-q4_K_M --compare gemini=gemini-3.8-flash --results evidence/results/level1/q06.json
+
+--- ollama: phi4-mini:3.8b-q4_K_M ---
+Based on the provided text, there is no specific mention of a code editor being used for personal projects. The text does not provide any information regarding the tools or software used for coding or project management outside of the work context at Lakeshore Community Credit Union. Therefore, it is not possible to cite a source for the use of a code editor for personal projects from the given text, as there is no conflicting information either. The text only details the use of Rust, esp-hal crate, and the planned use of MicroPython for a different project, but these are related to specific projects mentioned and not general personal coding practices.
+Finish: stop
+Elapsed: 67.070s
+
+--- gemini: gemini-3.8-flash ---
+Sending the prepared prompt and source text to this cloud provider.
+You currently use **Zed** for personal projects and coursework (Source: `journal/2026-10_reflections.md`).
+
+### Conflicting Information
+An earlier note lists your editor as **VS Code for everything (work and personal)** with the Python, Ruff, and GitLens extensions (Source: `preferences/tools_and_stack.md`). 
+
+However, your entry dated 2026-10-06 explicitly updates and replaces that note, stating you switched to Zed for personal projects and coursework because it runs faster on your MacBook Air and integrates with Ollama, while keeping VS Code only for your work laptop due to IT restrictions (Source: `journal/2026-10_reflections.md`).
+Finish: STOP
+Elapsed: 3.795s
