@@ -6,9 +6,9 @@ Studio assignment, Steps 1 and 2 of [`instructions.md`](instructions.md): give a
 | --- | --- |
 | Curated context folder | [`context_sample/`](context_sample/) |
 | Fixed evaluation questions and expected answers | [`eval/questions.json`](eval/questions.json) |
-| Raw results (JSON reports and terminal logs) | [`evidence/results/`](evidence/results/), [`evidence/logs/`](evidence/logs/) |
-| Generated results summary | [`evidence/RESULTS_SUMMARY.md`](evidence/RESULTS_SUMMARY.md) |
-| Screenshots | [`evidence/screenshots/`](evidence/screenshots/) |
+| Raw results (JSON reports and terminal logs) | [`results/`](results/), [`logs/`](logs/) |
+| Generated results summary | [`RESULTS_SUMMARY.md`](RESULTS_SUMMARY.md) |
+| Screenshots | [`screenshots/`](screenshots/) |
 | Comparison write-up | [`COMPARISON.md`](COMPARISON.md) |
 | Stretch: graph DB analysis | [`STRETCH_GRAPHDB.md`](STRETCH_GRAPHDB.md) |
 
@@ -47,6 +47,8 @@ python run_comparison.py --prepare      # snapshot -> prepared_context/course.tx
 python run_comparison.py                # 12 questions x {Level 1, Level 2} x {Phi-4 Mini, Gemini}
 python summarize_results.py             # writes evidence/RESULTS_SUMMARY.md
 ```
+
+The scripts write their output into a local `evidence/` folder. In this repository, the contents of that folder were uploaded at the top level (`RESULTS_SUMMARY.md`, `results/`, `logs/`, `screenshots/`).
 
 Useful options: `--only q01,q06`, `--levels 1`, `--dry-run`, `--delay 15` (if Gemini returns 429), and `--num-ctx 16384 --tag ctx16k` to rerun the local model with a larger context window.
 
