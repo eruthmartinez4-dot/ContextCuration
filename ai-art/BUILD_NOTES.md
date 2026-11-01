@@ -1,6 +1,6 @@
 # Build Notes: Woven Memory
 
-*Work in progress.* Sections marked **In my words** are still to be filled in by me.
+
 
 ## The idea
 
@@ -21,7 +21,7 @@ The goal of the assignment was to use **context stuffing**: give the AI my own t
 3. **The AI's reading of my work.** It identified weaving and grids, family memory and film, and fluid ink as my recurring threads (see `style-pack/STYLE_PACK.md`).
 4. **Concept.** It proposed weaving a family image with a color pour, echoing my bark photo-weavings and loom weavings. I agreed.
 5. **Tool instead of a single image.** Rather than one fixed picture, the AI built an interactive tool so that I make the creative decisions: weave pattern, strip size, gaps, hand-cut wobble, how muted or vivid the color is, film fade, grain, and light leak. I can also weave in my own family photos, which never leave my computer.
-6. **Iterating.** **In my words:** which settings and versions I chose and why. What felt like me, and what didn't. Which outputs are in `outputs/`.
+6. **Iterating.** I played around with variations of this program. I tried t abstract the art as much as possible from the original paintings. I also experimented with making a more "paper like" version, as well as a "digital version." Which outputs are in `outputs/`.
 
 ## Failures and how they were fixed
 
@@ -29,8 +29,7 @@ The goal of the assignment was to use **context stuffing**: give the AI my own t
 2. **The color pour looked like an oil slick.** The first pour was busy, high-frequency marbling with harsh outlines, nothing like my ink washes. The fix was larger, slower-moving shapes and softer, fewer "tide line" edges, closer to how ink pools and dries.
 3. **The vivid slider barely worked.** Chartreuse, orange, and pink almost never appeared, even at high settings, because of a threshold bug in how accent colors were mixed in. After the fix, the slider moves from mostly muted to strong color fields.
 4. **Format issue with my photos.** Several of my iPhone photos were HEIC files, which the AI could not see until they were converted to JPG. GitHub also doesn't preview HEIC, so all the images here are converted.
-5. **In my words:** any problems I ran into while using the tool or getting the AI to understand what I wanted.
-
+5. I didn't want my work to be exactly replicated or used in the program, I wanted to use it more as an inspiration for my style of painting, and art in general. 
 ## How it works (technical)
 
 Everything is drawn on an HTML canvas with JavaScript:
@@ -42,8 +41,8 @@ Everything is drawn on an HTML canvas with JavaScript:
 
 ## Reflection
 
-**In my words:** AI doesn't understand creativity, but it can mimic the data you give it. How much of the final piece feels like mine? What did the AI contribute, and what did only I bring?
+I was really pleased with how accurate it was able to give produce my most used color palette and style, only through feeding it a few samples f my art--most of which were in black and white. I was impressed by it's response to how I would describe my work and how it played around with those adjective. I do wish that it wouldn't have made something interactive, and more a piece of art that was inspired by my art, however I was extremely impressed with what it was able to create with the little information I gave it. 
 
 ## Next steps
 
-- **In my words:** what I would change or add next.
+I would like to continue playing with different iterations of this program and see what else I can create
